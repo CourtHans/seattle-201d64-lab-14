@@ -39,10 +39,14 @@ event.preventDefault();
 function addSelectedItemToCart() {
   // ********* TODO: suss out the item picked from the select list
   var table = document.getElementById('cart');
+  
   var tableRow = document.createElement('tr');
-  var desiredItem = document.createElement('td'); //the products picked
-  tableCell.textContent = this.name;
-  tableRow.appendChild(tableCell);
+  var chosenItem = document.createElement('td'); //the products picked
+  var optionList = getElementById('option');
+  var chosenOption = optionList.options[optionList.selectedIndex];
+  chosenOption.appendChild.chosenItem;
+  chosenItem.appendChild.tableRow;
+  
   // TODO: get the quantity
   var desiredQuantity = document.createElement('');//however many the user picks
   // TODO: using those, add one item to the Cart
