@@ -9,10 +9,13 @@ var cart = new Cart([]);
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
 
-  //TODO: Add an <option> tag inside the form's select for each product
+  // ********TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
-
+    var selectProduct = document.getElementById('items');
+    var option = document.createElement('option');
+    option.textContent = Product.allProducts[i].name;
+    selectProduct.appendChild(option);
   }
 
 }
@@ -21,8 +24,8 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
-
-  // TODO: Prevent the page from reloading
+event.preventDefault();
+  // ******** TODO: Prevent the page from reloading
 
   // Do all the things ...
   addSelectedItemToCart();
