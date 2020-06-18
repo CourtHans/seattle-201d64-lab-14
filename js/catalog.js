@@ -37,8 +37,14 @@ event.preventDefault();
 
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-  // TODO: suss out the item picked from the select list
+  // ********* TODO: suss out the item picked from the select list
+  var table = document.getElementById('cart');
+  var tableRow = document.createElement('tr');
+  var desiredItem = document.createElement('td'); //the products picked
+  tableCell.textContent = this.name;
+  tableRow.appendChild(tableCell);
   // TODO: get the quantity
+  var desiredQuantity = document.createElement('');//however many the user picks
   // TODO: using those, add one item to the Cart
 }
 
@@ -48,6 +54,9 @@ function updateCounter() {}
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
+  var firstDiv = document.getElementById('cartContents');
+
+  
   // TODO: Add a new element to the cartContents div with that information
 }
 
