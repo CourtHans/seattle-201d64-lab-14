@@ -24,8 +24,8 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
-event.preventDefault();
   // ******** TODO: Prevent the page from reloading
+  event.preventDefault();
 
   // Do all the things ...
   addSelectedItemToCart();
@@ -58,10 +58,13 @@ function updateCounter() {}
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
-  var firstDiv = document.getElementById('cartContents');
-
+  
+  var getItemQuantity = localStorage.getItem('stored-cart-info');
+  var getItemQuantityParsed = JSON.parse(getItemQuantity);
+  
   
   // TODO: Add a new element to the cartContents div with that information
+  var firstDiv = document.getElementById('cartContents');
 }
 
 // Set up the "submit" event listener on the form.

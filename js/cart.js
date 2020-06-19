@@ -62,7 +62,7 @@ function removeItemFromCart(event) {
 
   // TODO: Save the cart back to local storage
   var arrayOfItems = JSON.stringify(cart);
-  localStorage.clear();
+  localStorage.clear(); // cleared out localStorage so could refresh with up-to-date items
   localStorage.setItem('stored-cart-info', arrayOfItems);
 
   // TODO: Re-draw the cart table
