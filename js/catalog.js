@@ -29,7 +29,7 @@ event.preventDefault();
 
   // Do all the things ...
   addSelectedItemToCart();
-  cart.saveToLocalStorage();
+  cart.saveToLocalStorage(); 
   updateCounter();
   updateCartPreview();
 
